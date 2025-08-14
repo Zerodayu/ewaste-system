@@ -1,5 +1,6 @@
 import { styles } from "@/styles/landing-styles";
 import { useRouter } from "expo-router";
+import { ChevronRight } from "lucide-react-native";
 import { Text, TouchableOpacity, View } from "react-native";
 
 
@@ -20,6 +21,7 @@ export default function Index() {
           onPress={() => router.push("./secondPage")}
         >
           <Text style={styles.textPrimary}>Next</Text>
+          <ChevronRight size={20}/>
         </TouchableOpacity>
       </View>
     </View>

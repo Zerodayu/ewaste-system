@@ -1,9 +1,10 @@
 import { styles } from "@/styles/landing-styles";
-import { useNavigation } from "@react-navigation/native"; // <-- change here
+import { useNavigation } from "@react-navigation/native";
+import { ChevronRight } from "lucide-react-native";
 import { Text, TouchableOpacity, View } from "react-native";
 
 export default function SecondPage() {
-  const navigation = useNavigation(); // <-- change here
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -16,6 +17,7 @@ export default function SecondPage() {
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonPrimary}>
           <Text style={styles.textPrimary}>Next</Text>
+           <ChevronRight size={20}/>
         </TouchableOpacity>
       </View>
     </View>

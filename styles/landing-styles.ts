@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
     buttonPrimary: {
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-between",
         backgroundColor: COLORS.primary,
         paddingHorizontal: 20,
         padding: 12,

@@ -4,7 +4,7 @@ const dark = {
   secondary: "#393028",
   background: "#242424",
   foreground: "#ffffffff",
-  accent: "#fff3e7ff",
+  accent: "#fadbbcff",
   muted: "#504d4bff",
   destructive: "#C62828",
 };
