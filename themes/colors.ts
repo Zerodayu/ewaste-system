@@ -1,21 +1,21 @@
 // constants/colors.js
 const dark = {
-  primary: "#006effff",
+  primary: "#ffe0c2",
+  secondary: "#393028",
   background: "#242424",
   foreground: "#ffffffff",
-  accent: "#6eadffff",
-  muted: "#cfe8fffd",
-  border: "#003c8aff",
+  accent: "#fff3e7ff",
+  muted: "#504d4bff",
   destructive: "#C62828",
 };
 
 const light = {
-  primary: "#006effff",
+  primary: "#5e4e41ff",
+  secondary: "#ffe0c2",
   background: "#ffffffff",
   foreground: "#242424",
-  accent: "#6eadffff",
-  muted: "#cfe8fffd",
-  border: "#003c8aff",
+  accent: "#ada194ff",
+  muted: "#a19589ff",
   destructive: "#C62828",
 };
 

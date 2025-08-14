@@ -1,24 +1,20 @@
 import { styles } from "@/styles/landing-styles";
-import { useRouter } from "expo-router";
+import { useNavigation } from "@react-navigation/native"; // <-- change here
 import { Text, TouchableOpacity, View } from "react-native";
 
-
-export default function Index() {
-  const router = useRouter();
+export default function SecondPage() {
+  const navigation = useNavigation(); // <-- change here
 
   return (
     <View style={styles.container}>
       <View style={styles.skeleton} />
-      <Text style={styles.title}>First Screen on Startup</Text>
+      <Text style={styles.title}>Second Screen on Startup</Text>
 
       <View style={styles.footer}>
-        <TouchableOpacity style={styles.buttonOutline}>
+        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.buttonOutline}>
           <Text style={styles.textSecondary}>Skip</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonPrimary}
-          onPress={() => router.push("./secondPage")}
-        >
+        <TouchableOpacity style={styles.buttonPrimary}>
           <Text style={styles.textPrimary}>Next</Text>
         </TouchableOpacity>
       </View>
