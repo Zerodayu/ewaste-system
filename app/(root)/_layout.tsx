@@ -8,6 +8,7 @@ export default function RootLayout() {
       headerShown: false,
       tabBarActiveTintColor: COLORS.primary,
       tabBarInactiveTintColor: COLORS.muted,
+      animation: "fade",
       tabBarStyle: {
         backgroundColor: COLORS.background,
         borderTopWidth: 1,
@@ -18,7 +19,7 @@ export default function RootLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
+          title: "Scan",
           tabBarIcon: ({ color, size }) => <Focus size={size} color={color} />,
         }}
       />

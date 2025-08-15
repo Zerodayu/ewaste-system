@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   text: {
+    color: COLORS.foreground,
     fontSize: 24,
     fontWeight: "bold",
   },
