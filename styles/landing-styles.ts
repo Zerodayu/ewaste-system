@@ -1,5 +1,5 @@
+import { COLORS } from "@/styles/themes";
 import { StyleSheet } from "react-native";
-import { COLORS } from "../themes/colors";
 
 export const styles = StyleSheet.create({
     container: {
@@ -36,9 +36,9 @@ export const styles = StyleSheet.create({
     buttonPrimary: {
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "center",
         backgroundColor: COLORS.primary,
-        paddingHorizontal: 20,
+        paddingHorizontal: 22,
         padding: 12,
         borderRadius: 8,
     },
@@ -58,7 +58,7 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         backgroundColor: "transparent",
         borderWidth: 1,
-        borderColor: COLORS.accent,
+        borderColor: COLORS.primary,
         paddingHorizontal: 20,
         padding: 12,
         borderRadius: 8,

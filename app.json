@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "ewastemanagementsys",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "automatick",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
