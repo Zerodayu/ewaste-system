@@ -1,11 +1,11 @@
 import { COLORS } from "@/themes";
 import { router } from 'expo-router';
-import { ArrowRight, Gpu } from 'lucide-react-native';
+import { ArrowRight, MemoryStick } from 'lucide-react-native';
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-export default function Index() {
+export default function Third() {
   const nextPage = () => {
-    router.push('/second');
+    router.replace('/third');
   }
 
   return (
@@ -15,10 +15,10 @@ export default function Index() {
 
         <View style={styles.titleContainer}>
           <View style={styles.iconTitleGroup}>
-            <Gpu size={40} color={COLORS.white} />
+            <MemoryStick size={40} color={COLORS.white} />
             <View>
               <Text style={styles.header}>Title</Text>
-              <Text style={styles.subTitle}>Subtitle - first page</Text>
+              <Text style={styles.subTitle}>Subtitle - third page</Text>
             </View>
           </View>
         </View>
@@ -26,7 +26,7 @@ export default function Index() {
 
       <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={nextPage}>
-          <Text style={styles.buttonText}>Next</Text>
+          <Text style={styles.buttonText}>Login</Text>
           <ArrowRight size={18} color={COLORS.white} />
         </Pressable>  
       </View>
@@ -66,15 +66,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   container: {
-    borderWidth: 1,
-    borderColor: COLORS.accent,
     paddingHorizontal: 38,
     flex: 1,
     justifyContent: 'center',
   },
   buttonContainer: {
-    borderWidth: 1,
-    borderColor: COLORS.accent,
     flex: 0.1,
     justifyContent: 'center',
     marginBottom: 40,
