@@ -4,12 +4,9 @@ export default function RootLayout() {
   return (
     <Stack screenOptions={{
       headerShown: false,
-      animation: 'slide_from_right',
+      animation: 'none',
     }}>
       <Stack.Screen name="index" />
-      <Stack.Screen name="second" />
-      <Stack.Screen name="third" />
-      <Stack.Screen name="(login)" />
     </Stack>
   );
 }

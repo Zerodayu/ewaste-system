@@ -5,7 +5,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Third() {
   const nextPage = () => {
-    router.replace('/third');
+    router.replace('/(login)' as any);
   }
 
   return (
