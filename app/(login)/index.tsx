@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.secondary,
     paddingVertical: 10,
-    paddingHorizontal: 20,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 12,
-    width: '90%',
+    width: '80%',
   },
 })
 
