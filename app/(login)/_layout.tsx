@@ -4,9 +4,10 @@ export default function RootLayout() {
   return (
     <Stack screenOptions={{
       headerShown: false,
-      animation: 'none',
+      animation: 'default',
     }}>
       <Stack.Screen name="index" />
+      <Stack.Screen name="signUp" />
     </Stack>
   );
 }

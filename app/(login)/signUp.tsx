@@ -4,14 +4,14 @@ import { router } from 'expo-router';
 import { CircleUser, Lock, LogIn, Mail } from 'lucide-react-native';
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
-export default function Index() {
-  const goToSignup = () => {
-    router.push('/signUp');
+export default function Signup() {
+  const goToSignin = () => {
+    router.push('/');
   }
   return (
     <View style={styles.body}>
       <View style={styles.container}>
-        <Text style={styles.header}>Log-in</Text>
+        <Text style={styles.header}>Sign-up</Text>
         <CircleUser size={40} color={COLORS.text} />
       </View>
       <View style={styles.inputContainer}>
@@ -25,7 +25,7 @@ export default function Index() {
         </View>
 
         <Pressable style={styles.button} onPress={null}>
-          <Text style={styles.text}>Login</Text>
+          <Text style={styles.text}>Signup</Text>
           <LogIn size={18} color={COLORS.text} />
         </Pressable>
         <Text style={styles.text}>--- or ---</Text>
@@ -47,8 +47,8 @@ export default function Index() {
         <Pressable onPress={null}>
           <Text style={styles.text}>Forgot your password?</Text>
         </Pressable>
-        <Pressable onPress={goToSignup}>
-          <Text style={styles.secondaryText}>Don't have an account? Sign up</Text>
+        <Pressable onPress={goToSignin}>
+          <Text style={styles.secondaryText}>Already have an account? Sign in</Text>
         </Pressable>
       </View>
     </View>
