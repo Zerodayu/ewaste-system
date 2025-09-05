@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
   body: {
     backgroundColor: COLORS.background,
     flex: 1,
+    justifyContent: 'flex-start',
   },
   text: {
     color: COLORS.text,
@@ -170,7 +171,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20
   },
   masonryBox: {
-    flex: 1,
+    flex: 0.7,
     padding: 20,
   },
   masonryRow: {
@@ -184,11 +185,13 @@ const styles = StyleSheet.create({
   },
   masonryBtn1: {
     backgroundColor: COLORS.accent + '50',
+    borderRadius: 14,
     padding: 20,
     justifyContent: "space-between",
   },
   masonryBtn2: {
     flex: 1,
+    borderRadius: 14,
     backgroundColor: COLORS.secondary + '50',
     padding: 15,
     gap: 20,
@@ -196,6 +199,7 @@ const styles = StyleSheet.create({
   },
   masonryBtn3: {
     flex: 1,
+    borderRadius: 14,
     backgroundColor: COLORS.primary + '50',
     padding: 15,
     gap: 20,
@@ -232,7 +236,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   historyIconBox: {
-    padding: 5,
+    borderRadius: 100,
+    padding: 8,
     alignSelf: 'flex-start',
     backgroundColor: COLORS.primary + '50',
   },

@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
   button: {
     flexDirection: 'row',
     gap: 4,
+    borderRadius: 14,
     backgroundColor: COLORS.primary + '50',
     paddingVertical: 10,
     paddingHorizontal: 20,

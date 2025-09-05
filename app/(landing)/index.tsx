@@ -66,15 +66,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   container: {
-    borderWidth: 1,
-    borderColor: COLORS.accent,
     paddingHorizontal: 38,
     flex: 1,
     justifyContent: 'center',
   },
   buttonContainer: {
-    borderWidth: 1,
-    borderColor: COLORS.accent,
     flex: 0.1,
     justifyContent: 'center',
     marginBottom: 40,
@@ -83,6 +79,7 @@ const styles = StyleSheet.create({
   button: {
     flexDirection: 'row',
     gap: 4,
+    borderRadius: 14,
     backgroundColor: COLORS.primary + '50',
     paddingVertical: 10,
     paddingHorizontal: 20,

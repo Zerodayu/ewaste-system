@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.destructive + '20',
     width: '50%',
     padding: 12,
-    borderRadius: 8,
+    borderRadius: 14,
     alignItems: 'center',
   }
 })

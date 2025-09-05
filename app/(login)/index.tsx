@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
   button: {
     flexDirection: 'row',
     gap: 4,
+    borderRadius: 14,
     backgroundColor: COLORS.primary,
     paddingVertical: 10,
     paddingHorizontal: 20,
@@ -109,6 +110,7 @@ const styles = StyleSheet.create({
   SecondaryButton: {
     flexDirection: 'row',
     gap: 4,
+    borderRadius: 14,
     backgroundColor: "transparent",
     borderWidth: 1,
     borderColor: COLORS.secondary,
@@ -141,6 +143,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLORS.text + '30',
     width: '90%',
+    borderRadius: 14,
     borderWidth: 1,
     borderColor: COLORS.primary + '50',
     paddingHorizontal: 10,
