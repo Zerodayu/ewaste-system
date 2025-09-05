@@ -1,7 +1,7 @@
 // themes/colors.ts
 const dark = {
   text: "#E2E8F0",
-  primary: "#00F0FF",    // Bright cyan for primary actions
+  primary: "#00b3c0",    // Bright cyan for primary actions
   secondary: "#6B46C1",  // Deep purple for secondary elements
   background: "#0F172A", // Dark blue-gray background
   accent: "#10B981",     // Emerald green for accents

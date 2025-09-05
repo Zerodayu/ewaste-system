@@ -183,20 +183,20 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   masonryBtn1: {
-    backgroundColor: COLORS.accent + '20',
+    backgroundColor: COLORS.accent + '50',
     padding: 20,
     justifyContent: "space-between",
   },
   masonryBtn2: {
     flex: 1,
-    backgroundColor: COLORS.secondary + '20',
+    backgroundColor: COLORS.secondary + '50',
     padding: 15,
     gap: 20,
     justifyContent: "space-between",
   },
   masonryBtn3: {
     flex: 1,
-    backgroundColor: COLORS.primary + '20',
+    backgroundColor: COLORS.primary + '50',
     padding: 15,
     gap: 20,
     justifyContent: "space-between",
