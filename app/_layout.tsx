@@ -14,7 +14,11 @@ export default function RootLayout() {
         screenOptions={{
           headerShown: false,
         }}
-      />
+      >
+        <Stack.Screen name="(landing)" />
+        <Stack.Screen name="(login)" />
+        <Stack.Screen name="(tabs)" />
+      </Stack>
     </SafeAreaView>
   );
 }

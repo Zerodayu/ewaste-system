@@ -8,10 +8,6 @@ export default function Index() {
   const goToSignup = () => {
     router.push('/signUp');
   }
-
-  const goToTabs = () => {
-    router.push('/(tabs)' as any);
-  }
   return (
     <View style={styles.body}>
       <View style={styles.container}>
@@ -28,20 +24,20 @@ export default function Index() {
           <TextInput placeholder="Password" placeholderTextColor={COLORS.secondary} style={styles.input} secureTextEntry />
         </View>
 
-        <Pressable style={styles.button} onPress={goToTabs}>
+        <Pressable style={styles.button} onPress={null}>
           <Text style={styles.text}>Login</Text>
           <LogIn size={18} color={COLORS.text} />
         </Pressable>
         <Text style={styles.text}>--- or ---</Text>
 
         <View style={styles.socialButtonsContainer}>
-          <Pressable style={styles.SecondaryButton} onPress={goToTabs}>
+          <Pressable style={styles.SecondaryButton} onPress={null}>
             <IconBrandGoogleFilled size={18} color={COLORS.text} />
           </Pressable>
-          <Pressable style={styles.SecondaryButton} onPress={goToTabs}>
+          <Pressable style={styles.SecondaryButton} onPress={null}>
             <IconBrandGithubFilled size={18} color={COLORS.text} />
           </Pressable>
-          <Pressable style={styles.SecondaryButton} onPress={goToTabs}>
+          <Pressable style={styles.SecondaryButton} onPress={null}>
             <IconBrandAppleFilled size={18} color={COLORS.text} />
           </Pressable>
         </View>

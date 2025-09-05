@@ -1,7 +1,7 @@
 import { COLORS } from "@/themes";
 import { IconBrandAppleFilled, IconBrandGithubFilled, IconBrandGoogleFilled } from '@tabler/icons-react-native';
 import { router } from 'expo-router';
-import { CircleUser, Lock, LogIn, Mail } from 'lucide-react-native';
+import { Lock, Mail, SquareUser, UserPlus } from 'lucide-react-native';
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function Signup() {
@@ -12,7 +12,7 @@ export default function Signup() {
     <View style={styles.body}>
       <View style={styles.container}>
         <Text style={styles.header}>Sign-up</Text>
-        <CircleUser size={40} color={COLORS.text} />
+        <SquareUser size={40} color={COLORS.text} />
       </View>
       <View style={styles.inputContainer}>
         <View style={styles.inputWrapper}>
@@ -26,7 +26,7 @@ export default function Signup() {
 
         <Pressable style={styles.button} onPress={null}>
           <Text style={styles.text}>Signup</Text>
-          <LogIn size={18} color={COLORS.text} />
+          <UserPlus size={18} color={COLORS.text} />
         </Pressable>
         <Text style={styles.text}>--- or ---</Text>
 
