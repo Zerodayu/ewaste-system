@@ -1,24 +1,24 @@
 // themes/colors.ts
 const dark = {
-  text: "#E2E8F0",
-  primary: "#00b3c0",    // Bright cyan for primary actions
-  secondary: "#6B46C1",  // Deep purple for secondary elements
-  background: "#0F172A", // Dark blue-gray background
-  accent: "#10B981",     // Emerald green for accents
-  destructive: "#DC2626", // Bright red for destructive actions
-  black: "#000000",
-  white: "#ffffff",
+  text: "#F4F4F5",      // Clean white text
+  primary: "#06B6D4",   // Modern cyan
+  secondary: "#3B82F6",  // Bright blue for tech feel
+  background: "#18181B", // Deep gray background
+  accent: "#22C55E",    // Fresh green
+  destructive: "#EF4444", // Modern red
+  black: "#09090B",
+  white: "#FFFFFF",
 };
 
 const light = {
-  text: "#1E293B",
-  primary: "#0891B2",    // Cyan for primary actions
-  secondary: "#7C3AED",  // Vibrant purple for secondary elements
-  background: "#F8FAFC", // Clean light background
-  accent: "#059669",     // Modern green for accents
-  destructive: "#DC2626", // Consistent red for destructive actions
-  black: "#000000",
-  white: "#ffffff",
+  text: "#27272A",      // Dark gray text
+  primary: "#0EA5E9",   // Sky blue for primary
+  secondary: "#2563EB", // Royal blue
+  background: "#FAFAFA", // Ultra light gray
+  accent: "#16A34A",    // Professional green
+  destructive: "#DC2626", // Consistent red
+  black: "#09090B",
+  white: "#FFFFFF",
 };
 
 export const THEMES = {
