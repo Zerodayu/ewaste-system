@@ -1,8 +1,13 @@
 import { COLORS } from '@/themes'
+import { router } from 'expo-router'
 import { Bell, ChevronRight, CircleUser, Eclipse } from 'lucide-react-native'
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 
-const Profile = () => {
+export default function Profile() {
+    const signOut = () => {
+        router.replace('/(login)' as any);
+    }
+
   return (
     <View style={styles.container}>
       <View style={styles.profileCard}>
@@ -55,15 +60,13 @@ const Profile = () => {
       </View>
 
       <View style={styles.signOutBox}>
-        <Pressable style={styles.signOut} onPress={null}>
+        <Pressable style={styles.signOut} onPress={signOut}>
             <Text style={styles.title}>Sign out</Text>
         </Pressable>
       </View>
     </View>
   )
 }
-
-export default Profile
 
 const styles = StyleSheet.create({
   container: {
