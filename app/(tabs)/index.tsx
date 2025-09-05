@@ -1,8 +1,14 @@
 import { COLORS } from "@/themes";
-import { History, MapPinned, ScanSearch, Sparkle, Target } from 'lucide-react-native';
-import { Image, StyleSheet, Text, View } from "react-native";
+import { router } from "expo-router";
+import { Ellipsis, History, MapPinned, ScanSearch, Sparkle, Target } from 'lucide-react-native';
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+
 
 export default function Index() {
+  const goToProfile = () => {
+    router.navigate('/profile');
+  };
+
   return (
     <View style={styles.body}>
 
@@ -12,7 +18,9 @@ export default function Index() {
           <Target size={25} color={COLORS.text} />
           <Text style={styles.header}>AppName</Text> 
         </View>
-        <Image source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPIDVRt_Urc9z-y4fGrOmRV7DZQTztfc95Qw&s' }} style={styles.pfp} />
+        <Pressable onPress={goToProfile}>
+          <Image source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPIDVRt_Urc9z-y4fGrOmRV7DZQTztfc95Qw&s' }} style={styles.pfp} />
+        </Pressable>
       </View>
 
       {/* content */}
@@ -25,7 +33,7 @@ export default function Index() {
       <View style={styles.masonryBox}>
         <View style={styles.masonryRow}>
 
-          <View style={styles.masonryBtn1}>
+          <Pressable style={styles.masonryBtn1}>
             <View style={styles.iconContainer}>
               <Sparkle size={25} color={COLORS.text} />
             </View>
@@ -33,21 +41,21 @@ export default function Index() {
               <Text style={styles.text}>Total Points:</Text>
               <Text style={styles.points}>100</Text>
             </View>
-          </View>
+          </Pressable>
 
           <View style={styles.columnContainer}>
-            <View style={styles.masonryBtn2}>
+            <Pressable style={styles.masonryBtn2}>
               <View style={styles.iconContainer}>
                 <MapPinned size={25} color={COLORS.text} />
               </View>
               <Text style={styles.text}>Scan nearest shop</Text>
-            </View>
-            <View style={styles.masonryBtn3}>
+            </Pressable>
+            <Pressable style={styles.masonryBtn3}>
               <View style={styles.iconContainer}>
                 <ScanSearch size={25} color={COLORS.text} />
               </View>
               <Text style={styles.text}>Search by image</Text>
-            </View>
+            </Pressable>
           </View>
         </View>
       </View>
@@ -60,6 +68,32 @@ export default function Index() {
             <Text style={styles.footerTitle}>Recent Activity</Text>
           </View>
           <Text style={styles.footerText}>See All</Text>
+        </View>
+
+        <View style={styles.historyBox}>
+          <View style={styles.historyItem}>
+            <View style={styles.historyTitleBox}>
+              <View style={styles.historyIconBox}>
+                <ScanSearch size={25} color={COLORS.text} />
+              </View>
+              <Text style={styles.text}>Image Search</Text>
+            </View>
+            <Pressable>
+              <Ellipsis size={25} color={COLORS.text} />
+            </Pressable>
+          </View>
+
+          <View style={styles.historyItem}>
+            <View style={styles.historyTitleBox}>
+              <View style={styles.historyIconBox}>
+                <ScanSearch size={25} color={COLORS.text} />
+              </View>
+              <Text style={styles.text}>Image Search</Text>
+            </View>
+            <Pressable>
+              <Ellipsis size={25} color={COLORS.text} />
+            </Pressable>
+          </View>
         </View>
         
       </View>
@@ -113,13 +147,11 @@ const styles = StyleSheet.create({
     fontFamily: "monospace",
   },
   headerBox: {
-    borderWidth: 1,
-    borderColor: COLORS.accent,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    flex: 0.1,
+    flex: 0.3,
   },
   HeaderTitle: {
     flexDirection: 'row',
@@ -133,16 +165,12 @@ const styles = StyleSheet.create({
     height: 45 
   },
   contentBox: {
-    flex: 0.1,
-    borderWidth: 1,
-    borderColor: COLORS.accent,
+    flex: 0.2,
     justifyContent: 'center',
     paddingHorizontal: 20
   },
   masonryBox: {
-    flex: 0.4,
-    borderWidth: 1,
-    borderColor: COLORS.accent,
+    flex: 1,
     padding: 20,
   },
   masonryRow: {
@@ -162,14 +190,14 @@ const styles = StyleSheet.create({
   masonryBtn2: {
     flex: 1,
     backgroundColor: COLORS.secondary + '20',
-    padding: 10,
+    padding: 15,
     gap: 20,
     justifyContent: "space-between",
   },
   masonryBtn3: {
     flex: 1,
     backgroundColor: COLORS.primary + '20',
-    padding: 10,
+    padding: 15,
     gap: 20,
     justifyContent: "space-between",
   },
@@ -180,7 +208,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.text + '50',
   },
   footerBox: {
-    flex: 2.5,
+    flex: 0.5,
   },
   footerHead: {
     flexDirection: 'row',
@@ -193,6 +221,25 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
+  },
+  historyBox: {
+    paddingHorizontal: 20,
+  },
+  historyItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 5,
+    justifyContent: 'space-between',
+  },
+  historyIconBox: {
+    padding: 5,
+    alignSelf: 'flex-start',
+    backgroundColor: COLORS.primary + '50',
+  },
+  historyTitleBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
   }
 })
 
