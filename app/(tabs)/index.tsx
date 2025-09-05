@@ -1,56 +1,69 @@
 import { COLORS } from "@/themes";
-import { IconBrandAppleFilled, IconBrandGithubFilled, IconBrandGoogleFilled } from '@tabler/icons-react-native';
-import { router } from 'expo-router';
-import { CircleUser, Lock, LogIn, Mail } from 'lucide-react-native';
-import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { History, MapPinned, ScanSearch, Sparkle, Target } from 'lucide-react-native';
+import { Image, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
-  const goToSignup = () => {
-    router.push('/signUp');
-  }
   return (
     <View style={styles.body}>
-      <View style={styles.container}>
-        <Text style={styles.header}>Log-in</Text>
-        <CircleUser size={40} color={COLORS.text} />
-      </View>
-      <View style={styles.inputContainer}>
-        <View style={styles.inputWrapper}>
-          <Mail size={20} color={COLORS.text} />
-          <TextInput placeholder="uremail@example.com" placeholderTextColor={COLORS.secondary} style={styles.input} />
-        </View>
-        <View style={styles.inputWrapper}>
-          <Lock size={20} color={COLORS.text} />
-          <TextInput placeholder="Password" placeholderTextColor={COLORS.secondary} style={styles.input} secureTextEntry />
-        </View>
 
-        <Pressable style={styles.button} onPress={null}>
-          <Text style={styles.text}>Login</Text>
-          <LogIn size={18} color={COLORS.text} />
-        </Pressable>
-        <Text style={styles.text}>--- or ---</Text>
-
-        <View style={styles.socialButtonsContainer}>
-          <Pressable style={styles.SecondaryButton} onPress={null}>
-            <IconBrandGoogleFilled size={18} color={COLORS.text} />
-          </Pressable>
-          <Pressable style={styles.SecondaryButton} onPress={null}>
-            <IconBrandGithubFilled size={18} color={COLORS.text} />
-          </Pressable>
-          <Pressable style={styles.SecondaryButton} onPress={null}>
-            <IconBrandAppleFilled size={18} color={COLORS.text} />
-          </Pressable>
+      {/* header */}
+      <View style={styles.headerBox}> 
+        <View style={styles.HeaderTitle}> 
+          <Target size={25} color={COLORS.text} />
+          <Text style={styles.header}>AppName</Text> 
         </View>
+        <Image source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPIDVRt_Urc9z-y4fGrOmRV7DZQTztfc95Qw&s' }} style={styles.pfp} />
       </View>
 
-      <View style={styles.buttonContainer}>
-        <Pressable onPress={null}>
-          <Text style={styles.text}>Forgot your password?</Text>
-        </Pressable>
-        <Pressable onPress={goToSignup}>
-          <Text style={styles.secondaryText}>Don't have an account? Sign up</Text>
-        </Pressable>
+      {/* content */}
+      <View style={styles.contentBox}>
+        <Text style={styles.helloTxt}>Hello User</Text>
+        <Text style={styles.secondaryText}>Whats the plan for today?</Text>
       </View>
+
+      {/* bento box */}
+      <View style={styles.masonryBox}>
+        <View style={styles.masonryRow}>
+
+          <View style={styles.masonryBtn1}>
+            <View style={styles.iconContainer}>
+              <Sparkle size={25} color={COLORS.text} />
+            </View>
+            <View>
+              <Text style={styles.text}>Total Points:</Text>
+              <Text style={styles.points}>100</Text>
+            </View>
+          </View>
+
+          <View style={styles.columnContainer}>
+            <View style={styles.masonryBtn2}>
+              <View style={styles.iconContainer}>
+                <MapPinned size={25} color={COLORS.text} />
+              </View>
+              <Text style={styles.text}>Scan nearest shop</Text>
+            </View>
+            <View style={styles.masonryBtn3}>
+              <View style={styles.iconContainer}>
+                <ScanSearch size={25} color={COLORS.text} />
+              </View>
+              <Text style={styles.text}>Search by image</Text>
+            </View>
+          </View>
+        </View>
+      </View>
+
+      {/* footer */}
+      <View style={styles.footerBox}>
+        <View style={styles.footerHead}>
+          <View style={styles.headBox}>
+            <History size={25} color={COLORS.text} />
+            <Text style={styles.footerTitle}>Recent Activity</Text>
+          </View>
+          <Text style={styles.footerText}>See All</Text>
+        </View>
+        
+      </View>
+    
     </View>
   );
 }
@@ -62,99 +75,125 @@ const styles = StyleSheet.create({
   },
   text: {
     color: COLORS.text,
-    textAlign: 'center',
     fontFamily: "monospace",
     fontWeight: 'bold',
   },
   secondaryText: {
-    color: COLORS.secondary,
-    textAlign: 'center',
+    color: COLORS.accent,
     fontFamily: "monospace",
-    fontWeight: 'bold',
   },
   header: {
     color: COLORS.text,
     fontFamily: "monospace",
     fontWeight: 'bold',
-    alignSelf: 'center',
-    fontSize: 30,
+    fontSize: 20,
+    letterSpacing: 1.5,
   },
-  container: {
-    flexDirection: 'row',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 16,
-  },
-  buttonContainer: {
-    flex: 0.2,
-    justifyContent: 'center',
-    marginBottom: 40,
-    paddingHorizontal: 28,
-    gap: 14,
-  },
-  button: {
-    flexDirection: 'row',
-    gap: 4,
-    backgroundColor: COLORS.primary,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  SecondaryButton: {
-    flexDirection: 'row',
-    gap: 4,
-    backgroundColor: "transparent",
-    borderWidth: 1,
-    borderColor: COLORS.secondary,
-    paddingVertical: 10,
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonText: {
-    color: COLORS.white,
-    fontFamily: "monospace",
+  points: {
+    color: COLORS.accent,
     fontWeight: 'bold',
+    fontSize: 30,
+    letterSpacing: 2,
   },
-  iconTitleGroup: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 16,
-  },
-  titleContainer: {
-    marginVertical: 20,
-  },
-  inputContainer: {
-    flex: 1,
-    width: '100%',
-    alignItems: 'center',
-    gap: 16,
-  },
-  inputWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: COLORS.text + '30',
-    width: '90%',
-    borderWidth: 1,
-    borderColor: COLORS.primary + '50',
-    paddingHorizontal: 10,
-  },
-  input: {
-    flex: 1,
+  helloTxt: {
     color: COLORS.text,
     fontFamily: "monospace",
+    fontWeight: 'bold',
+    fontSize: 30,
+    letterSpacing: 1.5,
+  },
+  footerTitle: {
+    color: COLORS.text,
+    fontFamily: "monospace",
+    fontWeight: 'bold',
     fontSize: 16,
-    paddingLeft: 10,
   },
-  socialButtonsContainer: {
+  footerText: {
+    color: COLORS.text + '80',
+    fontFamily: "monospace",
+  },
+  headerBox: {
+    borderWidth: 1,
+    borderColor: COLORS.accent,
     flexDirection: 'row',
-    justifyContent: 'center',
     alignItems: 'center',
-    gap: 12,
-    width: '80%',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    flex: 0.1,
   },
+  HeaderTitle: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  pfp: {
+    borderWidth: 1.5,
+    borderColor: COLORS.accent,
+    borderRadius: 100,
+    width: 45,
+    height: 45 
+  },
+  contentBox: {
+    flex: 0.1,
+    borderWidth: 1,
+    borderColor: COLORS.accent,
+    justifyContent: 'center',
+    paddingHorizontal: 20
+  },
+  masonryBox: {
+    flex: 0.4,
+    borderWidth: 1,
+    borderColor: COLORS.accent,
+    padding: 20,
+  },
+  masonryRow: {
+    flex: 1,
+    flexDirection: 'row',
+    gap: 10,
+  },
+  columnContainer: {
+    flex: 1,
+    gap: 10,
+  },
+  masonryBtn1: {
+    backgroundColor: COLORS.accent + '20',
+    padding: 20,
+    justifyContent: "space-between",
+  },
+  masonryBtn2: {
+    flex: 1,
+    backgroundColor: COLORS.secondary + '20',
+    padding: 10,
+    gap: 20,
+    justifyContent: "space-between",
+  },
+  masonryBtn3: {
+    flex: 1,
+    backgroundColor: COLORS.primary + '20',
+    padding: 10,
+    gap: 20,
+    justifyContent: "space-between",
+  },
+  iconContainer: {
+    padding: 15,
+    borderRadius: 100,
+    alignSelf: 'flex-start',
+    backgroundColor: COLORS.text + '50',
+  },
+  footerBox: {
+    flex: 2.5,
+  },
+  footerHead: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  },
+  headBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  }
 })
 
 
